@@ -1,0 +1,22 @@
+
+1、运行resampleMask.py
+2、运行ML_traditional_one_file.py
+2.1 安装Radiomics包，参照https://cloud.tencent.com/developer/article/1662581
+2.2 首先查看conda存在的环境：
+    conda env list
+    创建我们需要的新环境：
+    conda create -n Radiomics python=3.7
+    进入Radiomics环境：
+    conda activate Radiomics
+    下载Pyradiomics安装包
+    git clone git://github.com/Radiomics/pyradiomics
+    进入Pyradiomics路径下
+    cd pyradiomics
+    安装Pyradiomics的依赖包
+    python -m pip install -r requirements.txt
+    安装Pyradiomics
+    python setup.py install
+    安装完之后，在命令行进入python环境中进行测试
+    python3
+    import radiomics
+    如果出错，python setup.py build_ext --inplace
